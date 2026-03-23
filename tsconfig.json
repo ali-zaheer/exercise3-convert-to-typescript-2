@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // sets the target compilation to ES6
+    "target": "ES6",
+    // uses CommonJS module system
+    "module": "commonjs",
+    // allows default imports from modules with no default export
+    "esModuleInterop": true,
+    // output directory for compiled JavaScript
+    "outDir": "./build",
+    // enables all strict type-checking options
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}
