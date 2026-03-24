@@ -4,6 +4,7 @@
     "target": "ES6",
     // uses CommonJS module system
     "module": "commonjs",
+    "lib": ["ES2020", "DOM"],  
     // allows default imports from modules with no default export
     "esModuleInterop": true,
     // output directory for compiled JavaScript
