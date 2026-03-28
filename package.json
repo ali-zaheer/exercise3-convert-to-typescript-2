@@ -5,16 +5,21 @@
   "main": "build/main.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node build/starter/main.js"
+    "start": "node build/starter/main.js",
+    "jasmine": "jasmine --config=starter/spec/support/jasmine.json",
+    "test": "npm run build && npm run jasmine"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jasmine": "^6.0.0",
     "@types/node": "^18.0.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "jasmine": "^6.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "undici-types": "^5.26.5"
   },
   "repository": {

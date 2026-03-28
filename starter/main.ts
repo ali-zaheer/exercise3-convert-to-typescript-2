@@ -1,5 +1,6 @@
 // Import readline module for getting input from console
 // Find more here: https://nodejs.org/api/readline.html#readline_readline
+
 import readline from 'readline';
 
 // define question/output interface
@@ -45,7 +46,7 @@ const peppermintQ = (): Promise<unknown> => {
 };
 
 // Create parent class Mocha
-class Mocha {
+export class Mocha {
   milk: number;
   shot: number;
   chocolateType: string;
@@ -65,15 +66,15 @@ class Mocha {
 }
 
 // inherits from Mocha
-class WhiteChocolateMocha extends Mocha {
+export class WhiteChocolateMocha extends Mocha {
   chocolateType = 'White';
 }
 // inherits from Mocha
-class DarkChocolateMocha extends Mocha {
+export class DarkChocolateMocha extends Mocha {
   chocolateType = 'Dark';
 }
 // inherits from Mocha
-class PeppermintMocha extends Mocha {
+export class PeppermintMocha extends Mocha {
   // add peppermint property
   peppermintSyrup: number;
   constructor() {
@@ -124,7 +125,7 @@ const userOptions = async (
   mochaObject.prepare();
 };
 
-const main = () => {
+export const main = () => {
   let menuChoice = 0;
   const buildMocha = async () :Promise<void>=> {
     do {
@@ -161,4 +162,6 @@ const main = () => {
   buildMocha();
 };
 
-main();
+if (require.main === module) {
+  main();
+}
