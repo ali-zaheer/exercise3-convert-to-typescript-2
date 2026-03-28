@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // sets the target compilation to ES6
-    "target": "ES6",
+    "target": "ES2019",
     // uses CommonJS module system
     "module": "commonjs",
     "lib": ["ES2020", "DOM"],  
@@ -12,5 +12,7 @@
     // enables all strict type-checking options
     "strict": true
   },
-  "exclude": ["node_modules"]
+  
+  "include": ["starter/**/*.ts"],
+  "exclude": ["node_modules", "spec"],
 }
